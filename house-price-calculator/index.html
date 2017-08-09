@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>King County House Price Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="UTF-8">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="http://d3js.org/topojson.v2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div id="start" class="fullScreen">
+		<h1>King County Home Value Calculator</h1>
+
+		<img src="img/wa-08.png" alt="WA" width="200" />
+		<p>King County, Washington is known for its expensive house prices. In this interactive visualization, you can explore architectural and geographic features that contribute to house prices and see how a particular house compares to the rest of King County.</p>
+		<a href="#build">Get Started</a>
+		<div id="credit">
+			Data: kaggle.com<br>
+			Images: CC license from Pixabay.com, Wikimedia Commons, or own work.
+		</div>
+	</div>
+
+	<div id="build" class="fullScreen">
+		<div class="header"><h2>Build a House</h2></div>
+		<p class="subtitle">Drag the sliders to customize your house. Check out how the value estimate at the bottom left changes as you make adjustments. Click next when you're ready to move on.</p>
+		<div class="container">
+			<svg id="front" height="500px" width="800px"></svg>
+			<svg id="top" height="500px" width="800px"></svg>
+			<div class="controls">
+				<div class="buttons">
+					<div data-view="front">Front View</div>
+					<div data-view="top">Top View</div>
+				</div>
+				<div class="slider">
+					House Size (sq. ft.)
+					<div class="input" id="sqft_living15"></div>
+				</div>
+
+				<div class="slider">
+					Lot Size (acres)
+					<div class="input" id="sqft_lot15"></div>
+				</div>
+
+				<div class="slider">
+					Basement Size (sq. ft.)
+					<div class="input" id="sqft_basement"></div>
+				</div>
+
+				<div class="slider">
+					Floors
+					<div class="input" id="floors"></div>
+				</div>
+
+				<div class="slider">
+					Year Built
+					<div class="input" id="yr_built"></div>
+				</div>
+
+				<div class="slider">
+					Year Renovated
+					<div class="input" id="yr_renovated"></div>
+				</div>
+
+				<div class="slider">
+					Bedrooms
+					<div class="input" id="bedrooms"></div>
+				</div>
+
+				<div class="slider">
+					Bathrooms
+					<div class="input" id="bathrooms">
+					</div>
+				</div>
+
+				<div class="slider">
+					Quality of View
+					<div class="input" id="view"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div id="priceEstimate">Current Value Estimate: $ --</div>
+			<div class="footerButtons">
+				<a href="#result" class="nextButton" id="toResult">Next: How Your House Compares ></a>
+			</div>
+		</div>
+	</div>
+
+	<div id="result" class="fullScreen">
+		<div class="header"><h2>How Your House Compares</h2></div>
+
+		<div class="wrapper">
+			<div id="houseStats">
+				Edit your house above and click "next" to see stats
+			</div>
+
+			<div id="histograms"></div>
+		</div>
+
+		<div class="footer">
+			<div class="footerButtons">
+				<a href="#build" class="nextButton">Previous</a>
+			</div>
+		</div>
+	</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

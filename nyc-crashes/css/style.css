@@ -1,0 +1,124 @@
+html, body {
+	margin: 0;
+	font-family: "Oswald", "Arial Narrow", sans-serif;
+	font-weight: 400;
+	overflow-x: hidden;
+	background-color: #111;
+}
+
+#header {
+	border-bottom: 2px solid #666;
+	padding: 10px;
+	overflow: hidden;
+	width: 100%;
+	height: 10%;
+}
+
+#header h1 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 1.5em;
+	color: #f8f8f8;
+	float: left;
+}
+
+h2 {
+	padding-left: 10px;
+	background-color: #999;
+	color: #fff;
+	height: 28px;
+	width: 80%;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+}
+
+#source {
+	font-style: italic;
+	font-size: .75em;
+	color: #d8d8d8;
+	float: right;
+	margin-right: 20px;
+	text-align: right;
+}
+
+#content {
+	max-width: 1400px;
+	height: 700px;
+	width: 100vw;
+	position: absolute;
+}
+
+#content-right {
+	height: 700px;
+	width: 698px;
+	float: left;
+	border-left: 1px solid #666;
+}
+
+#maps {
+	float: left;
+	height: 700px;
+	width: 700px;
+}
+
+#bars, #stackPlot {
+	display: block;
+	width: 100%;
+}
+
+#stackPlot {
+	border-bottom: 1px solid #333;
+}
+
+svg {
+	border: 0px solid #000;
+	font-family: "Oswald", "Arial Narrow", sans-serif;
+}
+
+.axisWhite path, .axisWhite line {
+	stroke: #fff;
+}
+
+.axisWhite text {
+	fill: #fff;
+}
+
+ text {
+	fill: #fff;
+}
+
+text.grayText {
+	fill: #666;
+}
+
+.legend {
+	position: absolute;
+}
+/* --- MAP STYLES --- */
+
+#boroughs {
+	stroke: #111;
+    fill: #666;
+}
+
+/* --- Responsive --- */
+
+@media screen and (max-width: 1399px) {
+	#content-right, #maps {
+		float: none;
+		margin: 0px auto;
+	}
+	#content-right {
+		border-left: none;
+		margin-top: 50px;
+	}
+	h2 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	overflow-x: show;
+}

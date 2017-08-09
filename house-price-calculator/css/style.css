@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html, body {
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Merriweather";
+	margin: 0;
+}
+
+.fullScreen {
+	width: 100%;
+	min-height: 100vh;
+	border-bottom: 1px solid #000;
+	position: relative;
+	overflow: hidden;
+}
+
+#start {
+	background-color: #5db544;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+}
+
+#start h1 {
+	margin-top: 10%;
+}
+
+#start p {
+	margin: 10px 10% 80px 10%;
+	font-size: 22px;
+}
+
+#start a {
+	padding: 20px 50px;
+	font-size: 32px;
+	background-color: #d8d8d8;
+	text-decoration: none;
+	color: #666;
+}
+
+#start a:hover {
+	background-color: #666;
+	color: #d8d8d8;
+	transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.header {
+	width: 100%;
+	background-color: #822f10;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #5db544;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#priceEstimate {
+	float: left;
+	padding: 10px;
+}
+
+.footerButtons {
+	float: right;
+	display: inline-block;
+}
+
+.nextButton {
+	display: inline-block;
+	margin-right: 10px;
+	background-color: #006ece;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+.nextButton:hover {
+	background-color: #0281ef;
+	transition: background-color 0.5s ease;
+}
+
+.tabs {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background-color: #d8d8d8;
+	border-bottom: 2px solid #999;
+}
+
+.tab {
+	text-align: center;
+	width: 50%;
+	float: left;
+	padding: 10px 0;
+	background-color: #d8d8d8;
+	display: inline;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 20px 20px 0 0;
+}
+
+.tab:hover {
+	background-color: #c8c8c8;
+}
+
+.active-tab {
+	background-color: #999;
+	color: #fff;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	max-width: 1242px;
+}
+
+#front, #top {
+	float: left;
+	margin: 10px;
+}
+
+#top {
+	display: none;
+}
+
+.controls {
+	float: left;
+	width: 400px;
+	height: 500px;
+	border: 1px solid #d8d8d8;
+	margin: 10px;
+}
+
+.slider {
+	overflow: hidden;
+	padding: 10px;
+}
+
+.slider p {
+	display: inline-block;
+	padding: 10px;
+}
+
+.input {
+	float: right;
+	width: 200px;
+}
+
+.input .currentValue {
+	display: inline-block;
+	background-color: #999;
+	color: #fff;
+	width: 50px;
+	padding: 5px;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.buttons{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.buttons div {
+	width: 170px;
+	padding: 5px;
+	margin: 5px;
+	position: relative;
+	display: inline-block;
+	background-color: #d8d8d8;
+	margin: 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+.buttons div:hover {
+	background-color: #999;
+	color: #fff;
+}
+
+.subtitle {
+	width: 800px;
+	margin: 10px auto;
+	text-align: center;
+	font-style: italic;
+}
+
+#result h1 {
+	border-bottom: 1px solid #d8d8d8;
+	margin-bottom: 10px;
+}
+
+#houseStats {
+	margin: 10px;
+	float: left;
+}
+
+#histograms {
+	display: inline-block;
+	float: right;
+	width: 900px;
+	margin: 10px;
+}
+
+#houseStats h2 {
+	display: inline-block;
+	color: #006ece;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+#credit {
+	bottom: 0;
+	position: absolute;
+	font-size: 12px;
+	text-align: left;
+	padding: 5px;
+}
+

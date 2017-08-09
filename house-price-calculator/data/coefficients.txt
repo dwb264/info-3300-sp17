@@ -1,0 +1,2 @@
+(Intercept)	bedrooms	bathrooms	sqft_living15	sqft_lot15	sqft_basement	floors	yr_built	yr_renovated	view
+ 6364000	-18170	151300	213.3	-.1455	98.35	102900	-3403	21.37	84410  

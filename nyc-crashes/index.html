@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYC Vehicle Collisions 2015-2016</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>NYC Vehicle Collisions 2015-2016: Where and When are the Fatal Collisions?</h1>
+			<span id="source">Source: NYPD, 2016.<br>https://www.kaggle.com/nypd/vehicle-collisions</span>
+		</div>
+		<div id="content">
+			<div id="maps">
+				<h2>Collision Locations by Vehicle Type</h2>
+				<svg class="legend" height="20" width="700"></svg>
+				<svg id="TRUCK" height="340" width="230"></svg>
+				<svg id="BIKE" height="340" width="230"></svg>
+				<svg id="TAXI" height="340" width="230"></svg>
+				<br>
+			    <svg id="BUS" height="340" width="230"></svg>
+			    <svg id="CAR" height="340" width="230"></svg>
+			    <svg id="SUV" height="340" width="230"></svg>
+			</div>
+			<div id="content-right">
+				<h2>Collisions Over Time: Cumulative and by Vehicle Type</h2>
+				<div id="stackPlot">
+					<svg width="700" height="340"></svg>
+				</div>
+				<div id="smallPlots"></div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
