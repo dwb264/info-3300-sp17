@@ -4,6 +4,7 @@
 html, body {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
+	background-color: #e8e8e8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,6 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+/* Repeated components */
 .fullScreen {
 	width: 100%;
 	min-height: 100vh;
@@ -19,8 +21,52 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 }
 
+.header {
+	width: 100%;
+	background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
+	text-align: center;
+	color: #fff;
+	padding: 20px 0;
+}
+
+.footer {
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	max-width: 1242px;
+	min-width: 1140px;
+}
+
+.footerButtons {
+	float: right;
+	display: inline-block;
+	overflow: show;
+}
+
+.nextButton {
+	display: inline-block;
+	margin-right: 10px;
+	color: #006ece;
+	text-decoration: none;
+	padding: 20px;
+	float: right;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+/* Start Screen */
 #start {
-	background-color: #5db544;
+	background: linear-gradient(to top, rgb(68, 160, 141), rgb(9, 54, 55));
 	color: #fff;
 	text-align: center;
 	overflow: hidden;
@@ -43,93 +89,30 @@ h1, h2, h3, h4, h5, h6 {
 	color: #666;
 }
 
-#start a:hover {
-	background-color: #666;
-	color: #d8d8d8;
-	transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.header {
-	width: 100%;
-	background-color: #822f10;
-	text-align: center;
+#start a:hover, .nextButton:hover {
+	background-color: #f96800;
 	color: #fff;
-	padding: 10px 0;
+	box-shadow: 0px 1px 5px #666;
+	transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	background-color: #5db544;
-	color: #fff;
-	font-size: 20px;
-	font-weight: bold;
+#credit {
+	padding: 5px;
+	margin-top: 100px;
+	color: #333;
 }
 
+
+/* Build Screen */
 #priceEstimate {
 	float: left;
-	padding: 10px;
-}
-
-.footerButtons {
-	float: right;
-	display: inline-block;
-}
-
-.nextButton {
-	display: inline-block;
-	margin-right: 10px;
-	background-color: #006ece;
-	color: #fff;
-	text-decoration: none;
-	padding: 10px 20px;
-}
-
-.nextButton:hover {
-	background-color: #0281ef;
-	transition: background-color 0.5s ease;
-}
-
-.tabs {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	background-color: #d8d8d8;
-	border-bottom: 2px solid #999;
-}
-
-.tab {
-	text-align: center;
-	width: 50%;
-	float: left;
-	padding: 10px 0;
-	background-color: #d8d8d8;
-	display: inline;
-	font-size: 20px;
-	cursor: pointer;
-	border-radius: 20px 20px 0 0;
-}
-
-.tab:hover {
-	background-color: #c8c8c8;
-}
-
-.active-tab {
-	background-color: #999;
-	color: #fff;
-}
-
-.container {
-	margin: 0 auto;
-	position: relative;
-	overflow: hidden;
-	max-width: 1242px;
+	padding: 20px 10px;
 }
 
 #front, #top {
 	float: left;
 	margin: 10px;
+	box-shadow: 0px 1px 5px #999;
 }
 
 #top {
@@ -142,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 500px;
 	border: 1px solid #d8d8d8;
 	margin: 10px;
+	box-shadow: 0px 1px 5px #999;
 }
 
 .slider {
@@ -194,11 +178,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .subtitle {
 	width: 800px;
-	margin: 10px auto;
+	margin: 20px auto;
 	text-align: center;
 	font-style: italic;
 }
 
+/* Result Screen */
 #result h1 {
 	border-bottom: 1px solid #d8d8d8;
 	margin-bottom: 10px;
@@ -221,16 +206,5 @@ h1, h2, h3, h4, h5, h6 {
 	color: #006ece;
 }
 
-.wrapper {
-	max-width: 1200px;
-	margin: 20px auto;
-}
 
-#credit {
-	bottom: 0;
-	position: absolute;
-	font-size: 12px;
-	text-align: left;
-	padding: 5px;
-}
 

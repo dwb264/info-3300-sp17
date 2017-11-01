@@ -26,6 +26,8 @@ d3.queue()
 	rawData = data.filter(function(d) { return Number(d["bedrooms"]) < 33; }); // Remove outlier w/33 bedrooms
 	coefficients = coeffs[0];
 	showHouse();
+	showHouseStats();
+	showHistogramsKC();
 });
 
 // Return the extent of a numerical variable from the dataset
@@ -475,7 +477,7 @@ function drawHistogram(hdata) {
 	var mouseArea = g.append("rect")
 	.attr("width", svg.attr("width") - (margin.right + margin.left))
 	.attr("height", svg.attr("height") - (margin.top + margin.bottom))
-	.attr("fill", "#fff");
+	.attr("fill", "#e8e8e8");
 
 	g.append("g").call(xAxis).attr("transform", "translate(0," + (svg.attr("height") - (margin.top + margin.bottom)) + ")")
 	.selectAll("text")
@@ -496,7 +498,7 @@ function drawHistogram(hdata) {
 				|| (Number(hdata.value) == bins[i].x1) && (i == bins.length-1)) {
 				return "#006ece";
 			}
-			return "#d8d8d8";
+			return "#b8b8b8";
 		})
 		.attr("d", "M" + (xScale(bins[i].x0)+1) + " " + yScale(0)
 			+ "L" + (xScale(bins[i].x1)-1) + " " + yScale(0)
